@@ -72,7 +72,7 @@ co(function* () {
         throw 'Database already exists.'
     }
     
-    let confString = fs.readFileSync('config/site-config.conf').toString()
+    let confString = fs.readFileSync(__dirname + '/config/site-config.conf').toString()
     
     let replacements = {
         siteUrl  : answers.siteUrl,
