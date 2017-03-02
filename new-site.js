@@ -56,7 +56,7 @@ co(function* () {
     let configFilePath = '/etc/apache2/sites-available/' + configFileName
     
     let dbName = answers.siteUrl.split('.').shift()
-    let dbUser = dbName
+    let dbUser = dbName.substr(0, 16)
     let dbPass = generator.generate({
         length: 10,
         numbers: true
